@@ -6,20 +6,13 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     label: "Languages",
-    skills: [
-      { name: "Python" },
-      { name: "SQL" },
-      { name: "JavaScript" },
-      { name: "HTML" },
-      { name: "CSS" },
-    ],
+    skills: [{ name: "Python" }, { name: "SQL" }],
   },
   {
     label: "Data / Machine Learning",
     skills: [
       { name: "NumPy" },
       { name: "Pandas" },
-      { name: "Scikit-learn" },
       { name: "Matplotlib" },
       { name: "TensorFlow" },
       { name: "Keras" },
@@ -31,8 +24,6 @@ export const skillCategories: SkillCategory[] = [
       { name: "LLMs" },
       { name: "RAG" },
       { name: "Prompt Engineering" },
-      { name: "AI Agents" },
-      { name: "Gemini API", highlight: true },
     ],
   },
   {
