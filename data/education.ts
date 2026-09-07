@@ -11,7 +11,7 @@ export type EducationEntry = {
 export const education: EducationEntry[] = [
   {
     degree: "Bachelor of Computer Applications (BCA)",
-    institution: "Osmania University / Pragna Degree College",
+    institution: "Osmania University / Pragnya Degree College",
     year: "2026",
     status: "Class of 2026",
     points: [
