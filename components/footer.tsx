@@ -38,7 +38,7 @@ export function Footer() {
             <Github size={16} />
           </a>
           <a 
-            href="https://www.linkedin.com/in/monu-mishra-b55998357" 
+            href="https://www.linkedin.com/in/monu-mishra-b55998357/" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="LinkedIn"
