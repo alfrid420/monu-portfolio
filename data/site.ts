@@ -9,13 +9,12 @@ export const site = {
   shortBio:
     "AI/ML engineer focused on building practical real-world solutions using machine learning, NLP, deep learning and generative AI.",
 
-  // TODO: replace placeholders below with your real details before deploying
-  email: "your-email@example.com", // placeholder
-  phone: "+91 00000 00000", // placeholder
-  location: "INDIA · OPEN TO WORK", // placeholder
+  email: "monumonukumar150@gmail.com",
+  phone: "+91 9963301653",
+  location: "HYDERABAD, INDIA · OPEN TO WORK",
   socials: {
-    github: "https://github.com/your-username", // placeholder
-    linkedin: "https://linkedin.com/in/your-username", // placeholder
-    resume: "/resume.pdf", // placeholder — drop your resume file in /public
+    github: "https://github.com/alfrid420",
+    linkedin: "https://www.linkedin.com/in/monu-mishra-b55998357/",
+    resume: "/resume.pdf",
   },
 };

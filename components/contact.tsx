@@ -16,7 +16,7 @@ export function Contact() {
         <Reveal>
           <h2 className="font-display font-semibold leading-[0.92] tracking-tight text-[14vw] sm:text-7xl md:text-8xl">
             <span className="block text-ink">LET&apos;S</span>
-            <span className="block text-stroke-cyan">BUILD</span>
+            <span className="block text-cyan sm:text-stroke-cyan">BUILD</span>
             <span className="block text-ink">TOGETHER</span>
           </h2>
         </Reveal>

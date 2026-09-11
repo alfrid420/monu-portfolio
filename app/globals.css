@@ -49,14 +49,6 @@ section[id] {
     color: transparent;
   }
 
-  @media (max-width: 640px) {
-    .text-stroke-magenta,
-    .text-stroke-cyan,
-    .text-stroke-lime {
-      -webkit-text-stroke: 1px currentColor;
-    }
-  }
-
   .text-gradient-lime-cyan {
     background: linear-gradient(90deg, #c6ff3c, #22e5ff);
     -webkit-background-clip: text;

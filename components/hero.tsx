@@ -45,7 +45,7 @@ export function Hero() {
           className="font-display font-semibold leading-[0.9] tracking-tight text-[15vw] sm:text-[8.5vw] md:text-[6.5rem] lg:text-[7.5rem]"
         >
           <span className="block text-ink">{site.firstName}</span>
-          <span className="block text-stroke-magenta">{site.lastName}</span>
+          <span className="block text-magenta sm:text-stroke-magenta">{site.lastName}</span>
         </motion.h1>
 
         <motion.p

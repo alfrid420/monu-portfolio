@@ -26,18 +26,31 @@ export function Projects() {
           </h2>
         </Reveal>
 
-        <RevealGroup className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-14 grid gap-6 md:grid-cols-2">
           {projects.map((project) => {
             const accent = accentClasses[project.accent];
+            // Whole card opens the live demo if there is one, otherwise the repo.
+            const primaryHref = project.liveDemo ?? project.github;
+
             return (
               <motion.div
                 key={project.title}
                 variants={revealItem}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                className={`group flex flex-col card-border rounded-2xl bg-base-card p-6 sm:p-7 transition-colors ${accent.border}`}
+                className={`group relative flex flex-col card-border rounded-2xl bg-base-card p-6 sm:p-7 transition-colors ${accent.border}`}
               >
-                <div className="flex items-start justify-between">
+                {primaryHref && (
+                  <a
+                    href={primaryHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${project.title}`}
+                    className="absolute inset-0 rounded-2xl z-0"
+                  />
+                )}
+
+                <div className="relative z-10 flex items-start justify-between pointer-events-none">
                   <span className="font-mono text-[10px] uppercase tracking-widest text-ink-faint">
                     {project.category}
                   </span>
@@ -48,15 +61,15 @@ export function Projects() {
                   </span>
                 </div>
 
-                <h3 className={`mt-4 font-display text-xl font-semibold ${accent.text}`}>
+                <h3 className={`relative z-10 mt-4 font-display text-xl font-semibold ${accent.text} pointer-events-none`}>
                   {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted flex-1">
+                <p className="relative z-10 mt-3 text-sm leading-relaxed text-ink-muted flex-1 pointer-events-none">
                   {project.description}
                 </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="relative z-10 mt-5 flex flex-wrap gap-2 pointer-events-none">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -67,7 +80,7 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="mt-6 flex items-center gap-3 pt-5 border-t border-base-border">
+                <div className="relative z-10 mt-6 flex items-center gap-3 pt-5 border-t border-base-border">
                   {project.github && (
                     <a
                       href={project.github}

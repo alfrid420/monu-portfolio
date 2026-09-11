@@ -7,39 +7,31 @@ export type Project = {
   description: string;
   tags: string[];
   accent: Accent;
-  github?: string; // placeholder — replace with your real repo URL
-  liveDemo?: string; // omit if there is no live demo
+  github?: string;
+  liveDemo?: string;
 };
 
 export const projects: Project[] = [
   {
     number: "01",
     category: "GENERATIVE AI · RETRIEVAL",
-    title: "RAG-Powered Search Engine",
+    title: "RAG-Based Document Analyser",
     description:
-      "A retrieval-augmented question answering system that retrieves relevant information from documents and generates grounded answers.",
-    tags: ["Python", "RAG", "LLM", "Embeddings", "Vector DB"],
+      "A privacy-focused Retrieval-Augmented Generation app that lets users upload PDFs and ask natural-language questions — running entirely on local models (Llama 3 via Ollama) with no external LLM API, so sensitive documents never leave the machine. Automatically flags deadlines, risks, and legal obligations in uploaded documents.",
+    tags: ["Python", "LangChain", "ChromaDB", "Ollama", "Streamlit"],
     accent: "lime",
-    github: "https://github.com/your-username/rag-search-engine", // placeholder
+    github: "https://github.com/alfrid420/RAG-Based-Document-Analyser",
+    liveDemo: "https://rag-based-document-analyser-d9yiya8ncczzvugrzdoeuy.streamlit.app/",
   },
   {
     number: "02",
     category: "GENERATIVE AI · NLP",
-    title: "AI Interviewer",
+    title: "AI Interviewer + Career Assessment Platform",
     description:
-      "An AI-powered mock interview application that generates interview questions and provides feedback on user responses.",
-    tags: ["Python", "Gemini API", "Streamlit", "NLP"],
+      "An AI-powered mock interview platform that analyzes an uploaded resume and generates interview questions targeted to the candidate's specific skills and projects, adapting difficulty based on performance. Scores answers across technical accuracy, communication clarity, and project knowledge — for both typed and voice responses via Whisper speech-to-text.",
+    tags: ["Python", "Streamlit", "Groq API", "Whisper", "LangChain"],
     accent: "cyan",
-    github: "https://github.com/your-username/ai-interviewer", // placeholder
-  },
-  {
-    number: "03",
-    category: "DEEP LEARNING · COMPUTER VISION",
-    title: "Handwritten Digit Recognition",
-    description:
-      "A deep-learning image classification application for recognizing handwritten digits.",
-    tags: ["Python", "TensorFlow", "Keras", "CNN"],
-    accent: "magenta",
-    github: "https://github.com/your-username/digit-recognition", // placeholder
+    github: "https://github.com/alfrid420/ai-interviewer",
+    liveDemo: "https://ai-interviewer-9mgewwvjx2jh7narzphojr.streamlit.app/",
   },
 ];
